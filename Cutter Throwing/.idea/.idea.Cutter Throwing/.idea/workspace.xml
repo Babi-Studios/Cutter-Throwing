@@ -43,7 +43,10 @@
         <option value="$PROJECT_DIR$/Assets/Destroyers.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Cutable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerRotation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TrajectoryLine.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemySpawner.cs" />
       </list>
     </option>
   </component>

@@ -15,7 +15,9 @@ public class Projectile : MonoBehaviour
     private bool isMoving;
 
     [SerializeField] private GameObject nextThrowable;
+    [SerializeField] private GameObject power;
 
+    
     [SerializeField] private float moveFactor;
     // Start is called before the first frame update
     void Start()
@@ -56,7 +58,7 @@ public class Projectile : MonoBehaviour
         {
             isMoving = true;
             throwable = !throwable;
-            Instantiate(nextThrowable, new Vector3(transform.position.x,transform.position.y,transform.position.z),Quaternion.identity);
+            Instantiate(nextThrowable, new Vector3(transform.position.x,transform.position.y,transform.position.z),Quaternion.Euler(0,0,22f));
         }
     }
 
@@ -70,8 +72,9 @@ public class Projectile : MonoBehaviour
 
     public void Die()
     {
-        if(transform.position.z>= 7f)
+        if(transform.position.z>= 10f)
         {Destroy(gameObject);}
     }
 
+    
 }

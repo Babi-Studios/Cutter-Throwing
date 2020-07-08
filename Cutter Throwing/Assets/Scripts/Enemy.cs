@@ -2,9 +2,9 @@
 
 public class Enemy : MonoBehaviour
 {
-    private void Update()
+  private void Update()
     {
-        transform.position += Vector3.left * Time.deltaTime * 5f;
+        transform.position += Vector3.left * Time.deltaTime * 8f;
         if (transform.position.x <= -10) {
             Destroy(gameObject);
         }

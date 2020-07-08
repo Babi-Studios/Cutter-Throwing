@@ -71,7 +71,7 @@ public class EnemySpawner : MonoBehaviour
     {
         spawnAvailable = false;
         float size = EnemySize();
-        yield return new WaitForSeconds(transform.localScale.y);
+        yield return new WaitForSeconds(transform.localScale.y*0.8f);
         GameObject go = Instantiate(Enemy);
         go.transform.position = new Vector3(10, 1, ZPosRandomizer());
         go.transform.localScale = new Vector3(size, .6f, .6f);
