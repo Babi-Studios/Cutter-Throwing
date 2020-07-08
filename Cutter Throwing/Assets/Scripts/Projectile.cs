@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
+using Quaternion = UnityEngine.Quaternion;
+using Vector3 = UnityEngine.Vector3;
 
 public class Projectile : MonoBehaviour
 {
-    private float clickTimer = 0.0f;
+    private float clickTimer;
     private float moveForce;
 
     private bool throwable = false;
@@ -17,7 +20,7 @@ public class Projectile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        clickTimer = .0f;
     }
 
     // Update is called once per frame
@@ -35,9 +38,9 @@ public class Projectile : MonoBehaviour
 
     private void InputController()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
         {
-            clickTimer += Time.time;
+            clickTimer += Time.deltaTime;
         }
         else if (Input.GetMouseButtonUp(0))
         {
@@ -54,7 +57,6 @@ public class Projectile : MonoBehaviour
             isMoving = true;
             throwable = !throwable;
             Instantiate(nextThrowable, new Vector3(transform.position.x,transform.position.y,transform.position.z),Quaternion.identity);
-
         }
     }
 
